@@ -23,5 +23,8 @@ def chat():
     reply = chatbot.get_reply(user_input)
     emissions = tracker.stop()
 
+    print(f"DEBUG - Emissions value: {emissions}")
+    print(f"DEBUG - Emissions type: {type(emissions)}")
+
     return jsonify({"reply": reply, "emissions": emissions})
 
